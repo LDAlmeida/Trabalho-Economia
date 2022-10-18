@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+**people/person_form.html**
+
+{% block content %}
+  <form method="post" novalidate>
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-6">
+        {{ form.empregos|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.certificacoes_tecnologia|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.certificacoes_gestao|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.certificacoes_seguranca|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.horas_tecnologia|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.horas_segurança|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.graduacoes|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.demissoes|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.papeis|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.discriminado|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.casado|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.filhos|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.receber|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.bolas|as_crispy_field }}
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Prever emprego</button>
+  </form>
+{% endblock %}
